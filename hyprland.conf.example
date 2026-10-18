@@ -1,0 +1,15 @@
+# Saturation: 0.0 = grayscale, 1.0 = normal, 3.0 = maximum
+# Brightness control keeps the original plugin's effective 0.90–1.10 range.
+
+hl.on("hyprland.start", function () 
+   hl.exec_cmd("hyprctl plugin load ~/.local/share/hyprland/plugins/hyprcolor.so")
+end)
+
+hl.config({
+    plugin = {
+        hyprcolor = {
+            value = 3.0,
+            brightness = 1.3,
+        },
+    },
+})
